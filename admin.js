@@ -1,12 +1,12 @@
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import{getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import{getFirestore,doc,getDoc,collection,addDoc,getDocs,updateDoc,deleteDoc,query,orderBy,limit}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import{getFirestore,doc,getDoc,collection,addDoc,getDocs,updateDoc,setDoc,deleteDoc,query,orderBy,limit}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import{firebaseConfig}from"./firebase-config.js";
 const cloudName="ey1okwcq",uploadPreset="koiarchala_members";
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),$=id=>document.getElementById(id);let admin=false;
 const msg=t=>$("adminMsg").textContent=t,esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const upload=async file=>{if(!file||!file.size)return"";let b=new FormData();b.append("file",file);b.append("upload_preset",uploadPreset);b.append("folder","koiarchala_members");let r=await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{method:"POST",body:b}),j=await r.json();if(!r.ok)throw Error(j.error?.message||"ছবি আপলোড ব্যর্থ");return j.secure_url};
-const save=async(col,data,id=null)=>id?updateDoc(doc(db,col,id),data):addDoc(collection(db,col),data);
+const save=async(col,data,id=null)=>id?setDoc(doc(db,col,id),data,{merge:true}):addDoc(collection(db,col),data);
 const check=()=>{if(!admin)throw Error("অ্যাডমিন অনুমতি নেই")};
 onAuthStateChanged(auth,async u=>{admin=false;if(u){try{let d=await getDoc(doc(db,"admins",u.uid));admin=d.exists()&&d.data().role==="admin"&&d.data().active===true}catch(e){msg("অ্যাডমিন যাচাই হয়নি: "+e.message)}}$("loginBox").hidden=admin;$("panel").hidden=!admin;if(admin)refreshLists()});
 $("login").onsubmit=async e=>{e.preventDefault();let f=new FormData(e.target);try{await signInWithEmailAndPassword(auth,f.get("email"),f.get("password"))}catch{$("loginMsg").textContent="ইমেইল বা পাসওয়ার্ড সঠিক নয়।"}};$("logout").onclick=()=>signOut(auth);

@@ -1,1 +1,20 @@
-rules_version = '2';service cloud.firestore{match /databases/{database}/documents{function admin(){return request.auth!=null&&exists(/databases/$(database)/documents/admins/$(request.auth.uid))&&get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role=='admin'&&get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active==true;}match /admins/{uid}{allow read:if request.auth!=null&&request.auth.uid==uid;allow write:if false;}match /applications/{id}{allow create:if true;allow read,update,delete:if admin;}match /members/{id}{allow read:if true;allow write:if admin;}match /committee/{id}{allow read:if true;allow write:if admin;}match /advisers/{id}{allow read:if true;allow write:if admin;}match /activities/{id}{allow read:if true;allow write:if admin;}match /finance/{id}{allow read:if true;allow write:if admin;}match /gallery/{id}{allow read:if true;allow write:if admin;}}}
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null && request.auth.uid == "A9NmMagl3QWO5WkSJszZiCmo1hk2";
+    }
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+    match /applications/{id} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+    match /{collectionName}/{id} {
+      allow read: if collectionName in ['members','committee','advisers','activities','finance','gallery','weekly_support','notices','settings'];
+      allow write: if isAdmin() && collectionName in ['members','committee','advisers','activities','finance','gallery','weekly_support','notices','settings'];
+    }
+  }
+}

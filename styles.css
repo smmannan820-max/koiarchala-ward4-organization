@@ -1,2 +1,46 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:#f3f8f3;color:#183322;line-height:1.65}.hero{background:#14532d;color:white;padding:22px;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}.hero img{width:82px;height:82px;object-fit:contain;background:#fff;border-radius:50%;padding:5px}.hero h1{margin:0;font-size:clamp(22px,4vw,32px)}.hero p{margin:4px 0}.headerlink{color:white}nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:13px;background:#dcfce7;position:sticky;top:0;z-index:5}nav a{color:#14532d;text-decoration:none;font-weight:650;padding:6px 9px;border-radius:7px}nav a:hover{background:#bbf7d0}main{max-width:1100px;margin:auto;padding:14px}section{background:white;margin:15px 0;padding:20px;border-radius:14px;box-shadow:0 2px 12px #0000000d}h2{color:#14532d;margin-top:0;border-bottom:2px solid #dcfce7;padding-bottom:8px}h3{margin:4px 0 8px}input,textarea,select,button{font:inherit;padding:11px;margin:4px 0;border:1px solid #bdcdbf;border-radius:8px;width:100%;background:white}textarea{min-height:85px}button{background:#166534;color:white;border:0;font-weight:bold;cursor:pointer}button:hover{background:#14532d}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.formgrid button{grid-column:1/-1}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px}.item{padding:13px;border:1px solid #d5e5d8;border-radius:11px;background:#fff}.person{display:flex;gap:12px;align-items:flex-start}.person h3{color:#14532d}.person p{margin:3px 0;overflow-wrap:anywhere}.person small{display:block}.avatar{width:88px;height:100px;object-fit:cover;border-radius:9px;flex-shrink:0}.placeholder{display:grid;place-items:center;background:#e5eee6;color:#59705d;font-size:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stats div,.finance-summary b{display:flex;flex-direction:column;text-align:center;background:#ecfdf3;border-radius:10px;padding:12px}.stats b{font-size:25px;color:#14532d}.stats span{font-size:13px}.finance-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}.gallery figure{margin:0;border:1px solid #d5e5d8;border-radius:10px;overflow:hidden}.gallery img,.widephoto{width:100%;height:190px;object-fit:cover}.gallery figcaption{padding:8px}.adminbar{display:flex;justify-content:space-between;align-items:center;gap:10px}.adminbar h2{border:0}.secondary{width:auto;padding:8px 18px;background:#475569}.adminsection{border-top:1px solid #d5e5d8;padding:16px 0}.adminrow{padding:10px;border:1px solid #d5e5d8;border-radius:8px;margin:8px 0}.adminrow button{width:auto;padding:6px 10px;margin-left:8px}.danger{background:#991b1b}footer{text-align:center;background:#14532d;color:white;padding:22px;margin-top:25px}[hidden]{display:none!important}@media(max-width:620px){.formgrid{grid-template-columns:1fr}.finance-summary{grid-template-columns:1fr}.hero{justify-content:flex-start}nav{position:static}.person{gap:9px}.avatar{width:75px;height:90px}}
 .adminsection{scroll-margin-top:12px}.adminrow{overflow-wrap:anywhere}.adminrow button{min-width:88px}.adminsection h4{margin:18px 0 8px;color:#14532d}.headerlink{padding:8px 12px;border:1px solid #ffffff80;border-radius:8px;text-decoration:none}.gallery img{display:block}.item h3{overflow-wrap:anywhere}button:focus,input:focus,textarea:focus,select:focus{outline:2px solid #16a34a;outline-offset:1px}
+
+
+/* Refined organization website presentation */
+:root{color-scheme:light}
+body{background:linear-gradient(180deg,#edf7ef 0%,#f7faf7 260px);color:#193526}
+.hero{background:linear-gradient(120deg,#0b3d25,#17633a 58%,#23834b);padding:30px 18px;box-shadow:0 5px 22px #0b3d2522}
+.hero img{width:96px;height:96px;border:3px solid #fff;box-shadow:0 4px 14px #0002}
+.hero h1{letter-spacing:.1px;text-shadow:0 1px 1px #0002}
+.hero p{color:#e4f7e9;font-size:16px}
+nav{box-shadow:0 3px 12px #173b2410;border-bottom:1px solid #cce5d1}
+nav a{transition:background .18s ease,transform .18s ease}
+nav a:hover{transform:translateY(-1px)}
+main{padding:20px 16px 32px}
+section{border:1px solid #e1eee3;box-shadow:0 5px 22px #123d1d0b;padding:clamp(17px,3vw,26px);margin:18px 0}
+section>h2{font-size:clamp(21px,3vw,27px);display:flex;align-items:center;gap:10px}
+section>h2:before{content:"";display:inline-block;width:5px;height:25px;border-radius:8px;background:#249653}
+.item{border-color:#dcebe0;box-shadow:0 3px 12px #173b2408;transition:transform .18s ease,box-shadow .18s ease}
+.item:hover{transform:translateY(-2px);box-shadow:0 8px 20px #173b2413}
+.person{min-height:120px}
+.avatar{background:#edf6ef;border:1px solid #e0eee3}
+input,textarea,select{border-color:#cbdccf;transition:border-color .15s,box-shadow .15s}
+input:focus,textarea:focus,select:focus{border-color:#269653;box-shadow:0 0 0 3px #26965320;outline:0}
+button{background:linear-gradient(120deg,#176638,#21834a);box-shadow:0 2px 5px #14532d20;transition:filter .15s,transform .15s}
+button:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.stats div{border:1px solid #dcefe1;background:linear-gradient(145deg,#f0fbf3,#e5f6e9)}
+.stats b{font-size:clamp(22px,4vw,30px)}
+.finance-summary b{border:1px solid #dcefe1;background:linear-gradient(145deg,#f1fbf3,#e5f5e9);color:#14532d}
+.gallery figure{background:#fff;box-shadow:0 3px 12px #173b240b}
+.gallery img{height:210px;object-fit:cover}
+footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
+#search{max-width:520px;margin:0 0 14px}
+#applyMsg,#adminMsg{padding:8px 0;color:#14532d;font-weight:600}
+@media(max-width:620px){
+ .hero{padding:22px 15px;gap:12px}
+ .hero img{width:76px;height:76px}
+ main{padding:10px}
+ section{border-radius:12px;margin:12px 0}
+ .stats{gap:6px}
+ .stats div{padding:9px 4px}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery img{height:145px}
+ nav{gap:5px;padding:9px}
+ nav a{font-size:13px;padding:6px 7px}
+}

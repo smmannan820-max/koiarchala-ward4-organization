@@ -27,7 +27,7 @@
 <input name="name" placeholder="পূর্ণ নাম" required><input name="father" placeholder="পিতার নাম">
 <input name="mother" placeholder="মাতার নাম"><input name="phone" placeholder="মোবাইল নম্বর" required>
 <input name="address" placeholder="সম্পূর্ণ ঠিকানা"><select name="blood"><option value="">রক্তের গ্রুপ</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select>
-<input name="profession" placeholder="পেশা"><label class="photo-field">সদস্যের ছবি (ঐচ্ছিক)<input type="file" name="photo" accept="image/*"></label><textarea name="message" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea>
+<input name="profession" placeholder="পেশা"><div class="photo-upload"><label for="memberPhoto">সদস্যের ছবি নির্বাচন করুন (ঐচ্ছিক)</label><input id="memberPhoto" type="file" name="photo" accept="image/*,.jpg,.jpeg,.png,.webp"><small>মোবাইলের গ্যালারি থেকে ছবি বাছাই করুন। সর্বোচ্চ ৫ MB।</small></div><textarea name="message" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea>
 <button>আবেদন জমা দিন</button></form><p id="applyMsg" aria-live="polite"></p>
 </section>
 <section id="activities"><h2>মানবিক কার্যক্রম</h2><p>প্রতি সপ্তাহে একজন অসহায় মানুষের পাশে দাঁড়ানোসহ সংগঠনের মানবিক উদ্যোগসমূহ।</p><div id="activitiesList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>

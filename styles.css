@@ -48,3 +48,6 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
 
 /* Clearly visible photo picker for public member applications */
 .photo-upload{grid-column:1/-1;display:block;padding:14px;border:2px dashed #269653;border-radius:10px;background:#f1fbf3}.photo-upload label{display:block;font-weight:700;color:#14532d;margin-bottom:6px}.photo-upload input[type=file]{display:block;width:100%;padding:10px;background:#fff;border:1px solid #bdcdbf;border-radius:8px}.photo-upload small{display:block;color:#526b59;margin-top:4px}
+
+
+.application-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;margin:12px 0}.application-summary div{background:#eef8f0;border:1px solid #d5e8d9;border-radius:9px;padding:10px;text-align:center}.application-summary b{display:block;font-size:22px;color:#14532d}.application-summary span{font-size:13px}.duplicate-warning{display:inline-block;margin:5px 0;padding:4px 8px;border-radius:6px;background:#fff1d6;color:#8a4b08;font-weight:700;font-size:13px}

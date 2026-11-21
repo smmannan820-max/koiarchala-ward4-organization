@@ -129,3 +129,5 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
 /* Make the membership application easy to notice near the top */
 #apply{border:2px solid #269653;background:linear-gradient(145deg,#f5fff7,#fff);box-shadow:0 5px 18px #14532d18}#apply>h2{color:#14532d}#apply>h2:after{content:'এখানে ফরম পূরণ করে সদস্য হওয়ার আবেদন করুন';display:block;font-size:14px;font-weight:500;color:#42664b;margin-left:auto}
 @media(max-width:620px){#apply{padding:18px 14px}#apply>h2{display:block}#apply>h2:after{margin-top:5px}}
+
+.org-qr{text-align:center}.org-qr img{display:block;width:min(260px,75vw);height:auto;margin:14px auto;padding:10px;background:#fff;border:1px solid #d5e5d8;border-radius:12px}.org-qr a{color:#14532d;font-weight:700}

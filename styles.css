@@ -125,3 +125,7 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
 #committeeList .vacancy-info b{display:block;color:#b28718;font-weight:750;font-size:clamp(14px,2.5vw,19px);line-height:1.5}
 #committeeList .vacancy-info p{margin:8px 0 3px;color:#435b49;font-size:13px}
 #committeeList .vacancy-info small{font-size:12px;color:#718071}
+
+/* Make the membership application easy to notice near the top */
+#apply{border:2px solid #269653;background:linear-gradient(145deg,#f5fff7,#fff);box-shadow:0 5px 18px #14532d18}#apply>h2{color:#14532d}#apply>h2:after{content:'এখানে ফরম পূরণ করে সদস্য হওয়ার আবেদন করুন';display:block;font-size:14px;font-weight:500;color:#42664b;margin-left:auto}
+@media(max-width:620px){#apply{padding:18px 14px}#apply>h2{display:block}#apply>h2:after{margin-top:5px}}

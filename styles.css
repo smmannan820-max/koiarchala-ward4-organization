@@ -119,8 +119,8 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
 #committeeList .committee-vacancy p{margin:8px 0 0;color:#718071;font-size:13px}
 
 /* Nine fixed committee position cards; empty posts keep the same card footprint */
-#committeeList .committee-vacancy{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;min-height:0;padding:0;overflow:hidden;border:1.5px solid #e7c34b;border-radius:22px;background:#fff;text-align:center;box-shadow:0 2px 6px #00000018}
-#committeeList .vacancy-photo{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1/1;background:linear-gradient(145deg,#f2f7f2,#e8f1e9);color:#7a9a82;font-size:clamp(58px,12vw,100px)}
+#committeeList .committee-vacancy{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;min-height:290px;padding:0;overflow:hidden;border:1.5px solid #e7c34b;border-radius:22px;background:#fff;text-align:center;box-shadow:0 2px 6px #00000018}
+#committeeList .vacancy-photo{display:flex;align-items:center;justify-content:center;width:100%;height:210px;aspect-ratio:auto;background:linear-gradient(145deg,#f2f7f2,#e8f1e9);color:#7a9a82;font-size:clamp(72px,15vw,112px)}
 #committeeList .vacancy-info{padding:12px 8px 14px}
 #committeeList .vacancy-info b{display:block;color:#b28718;font-weight:750;font-size:clamp(14px,2.5vw,19px);line-height:1.5}
 #committeeList .vacancy-info p{margin:8px 0 3px;color:#435b49;font-size:13px}

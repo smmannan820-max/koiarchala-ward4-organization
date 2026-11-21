@@ -112,3 +112,8 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
   #committeeList .person,#advisersList .person,#membersList .person{border-radius:15px}
   #committeeList .person>div,#advisersList .person>div,#membersList .person>div{padding:9px 5px}
 }
+
+/* Reserved committee positions awaiting assignment */
+#committeeList .committee-vacancy{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:150px;padding:16px;border:1.5px dashed #d8b64c;border-radius:18px;background:linear-gradient(145deg,#fffdf5,#fff);text-align:center;box-shadow:none}
+#committeeList .committee-vacancy .vacancy-role{font-weight:800;color:#a77b12;font-size:clamp(14px,2.4vw,18px)}
+#committeeList .committee-vacancy p{margin:8px 0 0;color:#718071;font-size:13px}

@@ -15,14 +15,7 @@
 <a href="#finance">অনুদান</a><a href="#gallery">গ্যালারি</a><a href="admin.html">অ্যাডমিন</a>
 </nav>
 <main>
-<section id="apply"><h2>সদস্য হওয়ার আবেদন</h2>
-<form id="applyForm" class="formgrid">
-<input name="name" placeholder="পূর্ণ নাম" required><input name="father" placeholder="পিতার নাম">
-<input name="mother" placeholder="মাতার নাম"><input name="phone" placeholder="মোবাইল নম্বর" required>
-<input name="address" placeholder="সম্পূর্ণ ঠিকানা"><select name="blood"><option value="">রক্তের গ্রুপ</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select>
-<input name="profession" placeholder="পেশা"><div class="photo-upload"><label for="memberPhoto">সদস্যের ছবি নির্বাচন করুন (ঐচ্ছিক)</label><input id="memberPhoto" type="file" name="photo" accept="image/*,.jpg,.jpeg,.png,.webp"><small>মোবাইলের গ্যালারি থেকে ছবি বাছাই করুন। সর্বোচ্চ ৫ MB।</small></div><textarea name="message" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea>
-<button>আবেদন জমা দিন</button></form><p id="applyMsg" aria-live="polite"></p>
-</section>
+
 
 
 
@@ -32,6 +25,14 @@
 </section>
 
 
+<section id="apply"><h2>সদস্য হওয়ার আবেদন</h2>
+<form id="applyForm" class="formgrid">
+<input name="name" placeholder="পূর্ণ নাম" required><input name="father" placeholder="পিতার নাম">
+<input name="mother" placeholder="মাতার নাম"><input name="phone" placeholder="মোবাইল নম্বর" required>
+<input name="address" placeholder="সম্পূর্ণ ঠিকানা"><select name="blood"><option value="">রক্তের গ্রুপ</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select>
+<input name="profession" placeholder="পেশা"><div class="photo-upload"><label for="memberPhoto">সদস্যের ছবি নির্বাচন করুন (ঐচ্ছিক)</label><input id="memberPhoto" type="file" name="photo" accept="image/*,.jpg,.jpeg,.png,.webp"><small>মোবাইলের গ্যালারি থেকে ছবি বাছাই করুন। সর্বোচ্চ ৫ MB।</small></div><textarea name="message" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea>
+<button>আবেদন জমা দিন</button></form><p id="applyMsg" aria-live="polite"></p>
+</section>
 <section id="committee"><h2>কার্যনির্বাহী কমিটি</h2><div id="committeeList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>
 <section id="advisers"><h2>উপদেষ্টা পরিষদ</h2><div id="advisersList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>
 <section id="members"><h2>সদস্য তালিকা</h2><input id="search" placeholder="নাম, সদস্য নম্বর বা রক্তের গ্রুপ খুঁজুন"><div id="membersList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>

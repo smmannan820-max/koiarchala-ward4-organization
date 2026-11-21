@@ -51,3 +51,64 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
 
 
 .application-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;margin:12px 0}.application-summary div{background:#eef8f0;border:1px solid #d5e8d9;border-radius:9px;padding:10px;text-align:center}.application-summary b{display:block;font-size:22px;color:#14532d}.application-summary span{font-size:13px}.duplicate-warning{display:inline-block;margin:5px 0;padding:4px 8px;border-radius:6px;background:#fff1d6;color:#8a4b08;font-weight:700;font-size:13px}
+
+
+/* Photo-first profile cards matching the supplied committee reference */
+#committeeList.cards,#advisersList.cards,#membersList.cards{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+#committeeList .person,#advisersList .person,#membersList .person{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  padding:0;
+  min-height:0;
+  overflow:hidden;
+  border:1.5px solid #e7c34b;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 2px 6px #00000018;
+  text-align:center;
+}
+#committeeList .person .avatar,#advisersList .person .avatar,#membersList .person .avatar{
+  width:100%;
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border:0;
+  border-radius:0;
+  flex-shrink:0;
+}
+#committeeList .person>div,#advisersList .person>div,#membersList .person>div{
+  width:100%;
+  padding:12px 8px 14px;
+}
+#committeeList .person h3,#advisersList .person h3,#membersList .person h3{
+  margin:5px 0 8px;
+  color:#171717;
+  font-size:clamp(14px,2.5vw,19px);
+  line-height:1.5;
+}
+#committeeList .person b{
+  display:block;
+  color:#b28718;
+  font-weight:750;
+  margin-bottom:7px;
+}
+#committeeList .person p,#advisersList .person p,#membersList .person p{
+  margin:2px 0;
+  font-size:13px;
+  overflow-wrap:anywhere;
+}
+#committeeList .person small,#advisersList .person small,#membersList .person small{
+  display:block;
+  font-size:12px;
+}
+@media(max-width:380px){
+  #committeeList.cards,#advisersList.cards,#membersList.cards{gap:9px}
+  #committeeList .person,#advisersList .person,#membersList .person{border-radius:15px}
+  #committeeList .person>div,#advisersList .person>div,#membersList .person>div{padding:9px 5px}
+}

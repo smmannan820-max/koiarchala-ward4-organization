@@ -638,3 +638,51 @@ footer{font-size:17px}
   overflow:visible !important;
   text-overflow:clip !important;
 }
+
+
+/* Enforce single-line text in all admin data tables */
+.adminsection .blanket-table-wrap,
+.adminsection .finance-table-wrap,
+.adminsection .admin-data-table-wrap{
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+}
+.adminsection .blanket-table,
+.adminsection .finance-table,
+.adminsection .admin-data-table{
+  display:table !important;
+  width:max-content !important;
+  min-width:100% !important;
+  table-layout:auto !important;
+  border-collapse:collapse !important;
+}
+.adminsection .blanket-table th,
+.adminsection .blanket-table td,
+.adminsection .finance-table th,
+.adminsection .finance-table td,
+.adminsection .admin-data-table th,
+.adminsection .admin-data-table td{
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:keep-all !important;
+  min-width:max-content !important;
+  width:auto !important;
+  max-width:none !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+}
+.adminsection .blanket-table th *,
+.adminsection .blanket-table td *,
+.adminsection .finance-table th *,
+.adminsection .finance-table td *,
+.adminsection .admin-data-table th *,
+.adminsection .admin-data-table td *{
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:keep-all !important;
+  max-width:none !important;
+}

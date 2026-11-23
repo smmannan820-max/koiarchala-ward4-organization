@@ -451,3 +451,61 @@ footer{font-size:17px}
     padding:7px 5px !important;
   }
 }
+
+
+/* Spreadsheet-style layout for EVERY table in the admin panel:
+   narrow columns, all text wraps, row height grows naturally */
+.adminsection .blanket-table,
+.adminsection .finance-table,
+.adminsection .admin-data-table{
+  width:100% !important;
+  table-layout:fixed !important;
+}
+.adminsection .blanket-table th,
+.adminsection .blanket-table td,
+.adminsection .finance-table th,
+.adminsection .finance-table td,
+.adminsection .admin-data-table th,
+.adminsection .admin-data-table td{
+  min-width:0 !important;
+  max-width:none !important;
+  padding:7px 6px !important;
+  white-space:normal !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+  overflow-wrap:anywhere !important;
+  word-break:normal !important;
+  line-height:1.4 !important;
+  vertical-align:middle !important;
+}
+.adminsection .blanket-table thead th,
+.adminsection .finance-table thead th,
+.adminsection .admin-data-table thead th{
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+}
+.adminsection .blanket-table button,
+.adminsection .finance-table button,
+.adminsection .admin-data-table button{
+  max-width:100%;
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+  padding:5px 6px !important;
+  font-size:11px !important;
+}
+@media(max-width:620px){
+  .adminsection .blanket-table,
+  .adminsection .finance-table,
+  .adminsection .admin-data-table{
+    min-width:760px !important;
+  }
+  .adminsection .blanket-table th,
+  .adminsection .blanket-table td,
+  .adminsection .finance-table th,
+  .adminsection .finance-table td,
+  .adminsection .admin-data-table th,
+  .adminsection .admin-data-table td{
+    font-size:12px !important;
+    padding:6px 5px !important;
+  }
+}

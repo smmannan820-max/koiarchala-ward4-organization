@@ -235,3 +235,6 @@ footer{font-size:17px}
     margin:6px 0 8px;
   }
 }
+
+/* Finance ledger and statement tools */
+.report-tools{margin-top:22px;padding:16px;border:1px solid #e5d9b5;border-radius:12px;background:#fbf9f2}.report-tools h4{margin-top:0}.report-tools [hidden]{display:none!important}.public-finance-group{margin:16px 0;padding:12px;border:1px solid #e7dfc8;border-radius:10px}.public-finance-group h3{color:#172033;border-bottom:2px solid #c9a227;padding-bottom:8px}.public-finance-group p{padding:8px 0;border-bottom:1px solid #eee;margin:0}.finance-summary{display:flex;gap:12px;flex-wrap:wrap}.finance-summary b{padding:10px 12px;background:#f7f4ea;border-radius:8px}

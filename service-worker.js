@@ -1,4 +1,4 @@
-const CACHE_NAME="koiarchala-app-v30";
+const CACHE_NAME="koiarchala-app-v31";
 const APP_FILES=["./","./index.html","./styles.css","./app.js","./firebase-config.js","./manifest.webmanifest","./icon.svg"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_FILES)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});

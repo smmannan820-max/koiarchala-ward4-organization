@@ -9,7 +9,20 @@ service cloud.firestore {
       allow write: if false;
     }
     match /blanket_applications/{id} {
-      allow read, create, update, delete: if isAdmin();
+      allow create: if isAdmin() || (
+        request.resource.data.keys().hasOnly(['name','father','village','phone','familyMembers','details','wardResident','status','createdAt']) &&
+        request.resource.data.keys().hasAll(['name','father','village','phone','familyMembers','wardResident','status','createdAt']) &&
+        request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 100 &&
+        request.resource.data.father is string && request.resource.data.father.size() <= 100 &&
+        request.resource.data.village is string && request.resource.data.village.size() > 0 && request.resource.data.village.size() <= 120 &&
+        request.resource.data.phone is string && request.resource.data.phone.size() > 0 && request.resource.data.phone.size() <= 20 &&
+        request.resource.data.familyMembers is int && request.resource.data.familyMembers >= 1 && request.resource.data.familyMembers <= 30 &&
+        request.resource.data.wardResident == true &&
+        request.resource.data.status == 'pending' &&
+        request.resource.data.createdAt is string &&
+        (!('details' in request.resource.data) || (request.resource.data.details is string && request.resource.data.details.size() <= 500))
+      );
+      allow read, update, delete: if isAdmin();
     }
     match /blanket_final/{id} {
       allow read: if true;

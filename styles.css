@@ -323,3 +323,37 @@ footer{font-size:17px}
   #applicationsList .adminrow{padding:7px 9px;font-size:12px;line-height:1.4}
   #applicationsList .adminrow b{font-size:13px}
 }
+
+
+/* Compact narrow columns for blanket application table on mobile */
+#blanketApplicationsList .blanket-table{
+  width:100%;
+  min-width:980px;
+  table-layout:fixed;
+}
+#blanketApplicationsList .blanket-table th,
+#blanketApplicationsList .blanket-table td{
+  width:105px;
+  max-width:105px;
+  padding:7px 8px;
+  font-size:13px;
+  line-height:1.35;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+#blanketApplicationsList .blanket-table th:first-child,
+#blanketApplicationsList .blanket-table td:first-child{width:48px;max-width:48px;text-align:center}
+#blanketApplicationsList .blanket-table th:nth-child(2),
+#blanketApplicationsList .blanket-table td:nth-child(2){width:112px;max-width:112px}
+#blanketApplicationsList .blanket-table th:nth-child(6),
+#blanketApplicationsList .blanket-table td:nth-child(6){width:130px;max-width:130px}
+#blanketApplicationsList .blanket-table th:last-child,
+#blanketApplicationsList .blanket-table td:last-child{width:160px;max-width:160px}
+#blanketApplicationsList .blanket-table td:last-child{white-space:normal}
+#blanketApplicationsList .blanket-table button{font-size:11px;padding:5px 6px;margin:1px}
+@media(max-width:620px){
+ #blanketApplicationsList .blanket-table{min-width:980px}
+ #blanketApplicationsList .blanket-table th,
+ #blanketApplicationsList .blanket-table td{font-size:12px;padding:6px}
+}

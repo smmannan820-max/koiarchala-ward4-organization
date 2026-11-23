@@ -238,3 +238,12 @@ footer{font-size:17px}
 
 /* Finance ledger and statement tools */
 .report-tools{margin-top:22px;padding:16px;border:1px solid #e5d9b5;border-radius:12px;background:#fbf9f2}.report-tools h4{margin-top:0}.report-tools [hidden]{display:none!important}.public-finance-group{margin:16px 0;padding:12px;border:1px solid #e7dfc8;border-radius:10px}.public-finance-group h3{color:#172033;border-bottom:2px solid #c9a227;padding-bottom:8px}.public-finance-group p{padding:8px 0;border-bottom:1px solid #eee;margin:0}.finance-summary{display:flex;gap:12px;flex-wrap:wrap}.finance-summary b{padding:10px 12px;background:#f7f4ea;border-radius:8px}
+
+
+/* High-contrast organization masthead: crisp white title, warm gold slogan */
+.hero{background:linear-gradient(115deg,#0b1424 0%,#172033 58%,#263753 100%);border-bottom:5px solid #c9a227}
+.hero>div{position:relative;padding-bottom:13px}
+.hero h1{color:#fff;font-weight:900;text-shadow:0 2px 12px #0008;letter-spacing:.15px}
+.hero p{color:#f1d77f;font-weight:750;text-shadow:0 1px 4px #0007}
+.hero>div:after{content:"";display:block;width:96px;height:4px;margin-top:10px;border-radius:10px;background:linear-gradient(90deg,#c9a227,#f1d77f)}
+@media(max-width:620px){.hero>div{padding-bottom:10px}.hero>div:after{width:76px;margin-top:8px}}

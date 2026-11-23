@@ -509,3 +509,43 @@ footer{font-size:17px}
     padding:6px 5px !important;
   }
 }
+
+
+/* Prevent any table-cell content from spilling into neighbouring cells */
+.adminsection .blanket-table,
+.adminsection .finance-table,
+.adminsection .admin-data-table{
+  border-collapse:collapse !important;
+  table-layout:fixed !important;
+}
+.adminsection .blanket-table th,
+.adminsection .blanket-table td,
+.adminsection .finance-table th,
+.adminsection .finance-table td,
+.adminsection .admin-data-table th,
+.adminsection .admin-data-table td{
+  box-sizing:border-box !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+  white-space:normal !important;
+  overflow:hidden !important;
+  vertical-align:top !important;
+}
+.adminsection .blanket-table td *,
+.adminsection .blanket-table th *,
+.adminsection .finance-table td *,
+.adminsection .finance-table th *,
+.adminsection .admin-data-table td *,
+.adminsection .admin-data-table th *{
+  max-width:100% !important;
+  box-sizing:border-box !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+  white-space:normal !important;
+}
+.adminsection .blanket-table td button,
+.adminsection .finance-table td button,
+.adminsection .admin-data-table td button{
+  display:inline-block;
+  height:auto !important;
+}

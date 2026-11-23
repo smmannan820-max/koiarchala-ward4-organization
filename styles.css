@@ -201,3 +201,13 @@ footer{font-size:17px}
  .adminrow small{font-size:14px}
  .adminsection h4{font-size:19px}
 }
+
+/* Final readability pass: prominent organization heading and slogan */
+.hero{gap:20px;padding:34px 20px}
+.hero h1{font-size:clamp(34px,5.2vw,48px);font-weight:850;line-height:1.4;letter-spacing:0}
+.hero p{font-size:clamp(20px,2.6vw,24px);font-weight:650;line-height:1.55;margin-top:8px;color:#f4e6b5}
+@media(max-width:620px){
+ .hero{gap:12px;padding:24px 14px}
+ .hero h1{font-size:clamp(29px,7vw,35px);line-height:1.45}
+ .hero p{font-size:19px;line-height:1.6;margin-top:6px}
+}

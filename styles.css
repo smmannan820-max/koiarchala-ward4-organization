@@ -599,3 +599,42 @@ footer{font-size:17px}
 .adminsection .admin-data-table button{
   white-space:nowrap !important;
 }
+
+
+/* FINAL: absolutely every table value stays on ONE line */
+.adminsection .blanket-table-wrap,
+.adminsection .finance-table-wrap,
+.adminsection .admin-data-table-wrap{
+  display:block !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  white-space:normal !important;
+}
+.adminsection table.blanket-table,
+.adminsection table.finance-table,
+.adminsection table.admin-data-table{
+  width:max-content !important;
+  min-width:100% !important;
+  table-layout:auto !important;
+}
+.adminsection table.blanket-table th,
+.adminsection table.blanket-table td,
+.adminsection table.finance-table th,
+.adminsection table.finance-table td,
+.adminsection table.admin-data-table th,
+.adminsection table.admin-data-table td,
+.adminsection table.blanket-table th *,
+.adminsection table.blanket-table td *,
+.adminsection table.finance-table th *,
+.adminsection table.finance-table td *,
+.adminsection table.admin-data-table th *,
+.adminsection table.admin-data-table td *{
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:keep-all !important;
+  min-width:max-content !important;
+  max-width:none !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+}

@@ -275,3 +275,18 @@ footer{font-size:17px}
 .finance-table td:nth-child(4){font-weight:800;white-space:nowrap}
 .finance-table button{font-size:13px;padding:7px 9px;margin:2px}
 @media(max-width:620px){.finance-table{min-width:800px}.finance-table th,.finance-table td{font-size:14px;padding:8px}}
+
+/* Admin management lists use the same readable serial-table layout */
+.admin-data-table-wrap{width:100%;overflow-x:auto;margin:14px 0;border:1px solid #dfd3ad;border-radius:12px;background:#fff}
+.admin-data-table{width:100%;min-width:700px;border-collapse:collapse;background:#fff;color:#172033}
+.admin-data-table th,.admin-data-table td{border:1px solid #e2d8bd;padding:10px 12px;text-align:left;vertical-align:middle;font-size:15px;line-height:1.5;white-space:normal}
+.admin-data-table thead th{position:sticky;top:0;background:#172033;color:#f1d77f;font-weight:800;white-space:nowrap}
+.admin-data-table tbody tr:nth-child(even){background:#fbf8ee}
+.admin-data-table td:first-child,.admin-data-table th:first-child{text-align:center;width:58px;font-weight:800}
+.admin-data-table td:last-child{min-width:150px}
+.admin-data-table button{font-size:13px;padding:7px 9px;margin:2px}
+.admin-data-table .adviser-edit-form{min-width:260px;margin-top:8px;padding:10px;background:#f7f4ea;border-radius:8px}
+.admin-list-total{text-align:right;font-weight:800;color:#172033;margin:8px 2px 14px}
+.adminsection{scroll-margin-top:12px}
+.adminsection>h3{font-size:clamp(19px,3vw,24px);color:#172033;border-left:5px solid #c9a227;padding:8px 12px;background:#f7f4ea;border-radius:7px}
+@media(max-width:620px){.admin-data-table{min-width:680px}.admin-data-table th,.admin-data-table td{font-size:14px;padding:8px}}

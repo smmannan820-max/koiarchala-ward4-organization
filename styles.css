@@ -250,3 +250,16 @@ footer{font-size:17px}
 
 /* Blanket distribution public final list */
 .blanket-public-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.blanket-public-row{display:grid;grid-template-columns:42px 1fr;gap:3px 10px;align-items:center;padding:12px;border:1px solid #e7d9a8;border-radius:10px;background:#fffdf6}.blanket-public-row b{grid-row:span 2;color:#8a6b10;font-size:18px}.blanket-public-row span{font-weight:700}.blanket-public-row small{color:#526b59}
+
+/* Blanket final list: consistent serial table on screen and print */
+.blanket-table-wrap{width:100%;overflow-x:auto;margin:14px 0;border:1px solid #dfd3ad;border-radius:10px;background:#fff}
+.blanket-table{width:100%;min-width:760px;border-collapse:collapse;color:#172033;background:#fff}
+.blanket-table th,.blanket-table td{border:1px solid #e2d8bd;padding:11px 12px;text-align:left;vertical-align:middle;font-size:16px;line-height:1.5;white-space:normal}
+.blanket-table thead th{background:#172033;color:#f1d77f;font-weight:800;white-space:nowrap}
+.blanket-table tbody tr:nth-child(even){background:#fbf8ee}
+.blanket-table td:first-child,.blanket-table th:first-child{text-align:center;width:64px;font-weight:800}
+.blanket-table td:nth-child(2){font-weight:750;min-width:150px}
+.blanket-table td:last-child{min-width:125px}
+.blanket-total{text-align:right;font-weight:800;color:#172033;margin-top:12px;font-size:18px}
+.blanket-table button{font-size:13px;padding:7px 9px;margin:2px}
+@media(max-width:620px){.blanket-table{min-width:720px}.blanket-table th,.blanket-table td{font-size:15px;padding:9px 10px}}

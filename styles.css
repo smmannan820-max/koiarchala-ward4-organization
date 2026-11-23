@@ -723,3 +723,28 @@ footer{font-size:17px}
   word-break:keep-all !important;
   max-width:none !important;
 }
+
+
+/* Compact vertical height for blanket distribution tables; keep full text on one horizontal line */
+.blanket-table-wrap table.blanket-table th,
+.blanket-table-wrap table.blanket-table td{
+  padding:4px 8px !important;
+  font-size:12px !important;
+  line-height:1.15 !important;
+  height:auto !important;
+  min-height:0 !important;
+  vertical-align:middle !important;
+  white-space:nowrap !important;
+}
+.blanket-table-wrap table.blanket-table tbody tr{
+  height:auto !important;
+}
+.blanket-table-wrap table.blanket-table button{
+  padding:3px 6px !important;
+  margin:1px !important;
+  font-size:11px !important;
+  line-height:1.1 !important;
+  min-height:0 !important;
+  height:auto !important;
+  white-space:nowrap !important;
+}

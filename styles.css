@@ -549,3 +549,53 @@ footer{font-size:17px}
   display:inline-block;
   height:auto !important;
 }
+
+
+/* Single-line table cells: long names stay on the same line; scroll sideways */
+.adminsection .blanket-table-wrap,
+.adminsection .finance-table-wrap,
+.adminsection .admin-data-table-wrap{
+  width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:visible !important;
+  -webkit-overflow-scrolling:touch;
+}
+.adminsection .blanket-table,
+.adminsection .finance-table,
+.adminsection .admin-data-table{
+  width:max-content !important;
+  min-width:100% !important;
+  table-layout:auto !important;
+}
+.adminsection .blanket-table th,
+.adminsection .blanket-table td,
+.adminsection .finance-table th,
+.adminsection .finance-table td,
+.adminsection .admin-data-table th,
+.adminsection .admin-data-table td{
+  width:auto !important;
+  min-width:max-content !important;
+  max-width:none !important;
+  white-space:nowrap !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  vertical-align:middle !important;
+}
+.adminsection .blanket-table td *,
+.adminsection .blanket-table th *,
+.adminsection .finance-table td *,
+.adminsection .finance-table th *,
+.adminsection .admin-data-table td *,
+.adminsection .admin-data-table th *{
+  max-width:none !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+}
+.adminsection .blanket-table button,
+.adminsection .finance-table button,
+.adminsection .admin-data-table button{
+  white-space:nowrap !important;
+}

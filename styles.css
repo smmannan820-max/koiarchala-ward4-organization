@@ -247,3 +247,6 @@ footer{font-size:17px}
 .hero p{color:#f1d77f;font-weight:750;text-shadow:0 1px 4px #0007}
 .hero>div:after{content:"";display:block;width:96px;height:4px;margin-top:10px;border-radius:10px;background:linear-gradient(90deg,#c9a227,#f1d77f)}
 @media(max-width:620px){.hero>div{padding-bottom:10px}.hero>div:after{width:76px;margin-top:8px}}
+
+/* Blanket distribution public final list */
+.blanket-public-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.blanket-public-row{display:grid;grid-template-columns:42px 1fr;gap:3px 10px;align-items:center;padding:12px;border:1px solid #e7d9a8;border-radius:10px;background:#fffdf6}.blanket-public-row b{grid-row:span 2;color:#8a6b10;font-size:18px}.blanket-public-row span{font-weight:700}.blanket-public-row small{color:#526b59}

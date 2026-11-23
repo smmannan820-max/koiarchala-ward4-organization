@@ -748,3 +748,30 @@ footer{font-size:17px}
   height:auto !important;
   white-space:nowrap !important;
 }
+
+
+/* Extra-short blanket table rows */
+.blanket-table-wrap table.blanket-table th,
+.blanket-table-wrap table.blanket-table td{
+  padding:1px 5px !important;
+  font-size:10px !important;
+  line-height:1 !important;
+  height:20px !important;
+  min-height:0 !important;
+  vertical-align:middle !important;
+}
+.blanket-table-wrap table.blanket-table tbody tr{
+  height:20px !important;
+}
+.blanket-table-wrap table.blanket-table button{
+  padding:1px 4px !important;
+  margin:0 !important;
+  font-size:9px !important;
+  line-height:1 !important;
+  min-height:0 !important;
+  height:18px !important;
+}
+.blanket-table-wrap table.blanket-table img{
+  max-height:18px !important;
+  width:auto !important;
+}

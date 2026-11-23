@@ -131,3 +131,24 @@ footer{background:linear-gradient(120deg,#0b3d25,#17633a);padding:26px 16px}
 @media(max-width:620px){#apply{padding:18px 14px}#apply>h2{display:block}#apply>h2:after{margin-top:5px}}
 
 .org-qr{text-align:center}.org-qr img{display:block;width:min(260px,75vw);height:auto;margin:14px auto;padding:10px;background:#fff;border:1px solid #d5e5d8;border-radius:12px}.org-qr a{color:#14532d;font-weight:700}
+
+/* Golden and navy premium palette */
+:root{--navy:#172033;--gold:#c9a227;--gold-light:#e5c76b;--cream:#f7f4ea}
+body{background:linear-gradient(180deg,var(--cream) 0%,#fff 300px);color:var(--navy)}
+.hero,footer{background:linear-gradient(120deg,#101827,var(--navy) 62%,#26334b);color:#fff}
+.hero{border-bottom:4px solid var(--gold)}
+.hero img{border:3px solid var(--gold);background:#fff}
+nav{background:var(--navy);border-bottom:2px solid var(--gold)}
+nav a{color:#fff}nav a:hover{background:#34415a;color:var(--gold-light)}
+h2,.person h3,.adminsection h4{color:var(--navy)}
+h2{border-bottom-color:var(--gold-light)}section>h2:before{background:var(--gold)}
+section{border-color:#eadcae;background:#fffdf8}
+.item{border-color:#e7d9a8}
+#committeeList .person,#advisersList .person,#membersList .person{border-color:var(--gold)}
+input:focus,textarea:focus,select:focus,button:focus{outline-color:var(--gold);border-color:var(--gold)}
+button{background:linear-gradient(120deg,var(--navy),#2a3852);box-shadow:0 2px 6px #17203322}
+button:hover{background:linear-gradient(120deg,#26334b,var(--navy))}
+.stats div,.finance-summary b,.application-summary div{background:linear-gradient(145deg,#fffdf6,#f7f0d9);border:1px solid var(--gold-light);color:var(--navy)}
+.stats b,.finance-summary b{color:#8a6b10}
+.adminsection{border-top-color:#eadcae}.headerlink{border-color:var(--gold-light);color:#fff}
+@media(max-width:620px){nav{position:static}}

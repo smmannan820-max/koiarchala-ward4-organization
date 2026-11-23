@@ -8,7 +8,16 @@ service cloud.firestore {
       allow read: if request.auth != null && request.auth.uid == uid;
       allow write: if false;
     }
-    match /blanket_applications/{id} {\n      allow read, create, update, delete: if isAdmin();\n    }\n    match /blanket_final/{id} {\n      allow read: if true;\n      allow create, update, delete: if isAdmin();\n    }\n    match /counters/{id} {\n      allow read, write: if isAdmin();\n    }\n    match /applications/{id} {
+    match /blanket_applications/{id} {
+      allow read, create, update, delete: if isAdmin();
+    }
+    match /blanket_final/{id} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+    match /counters/{id} {
+      allow read, write: if isAdmin();
+    }\n    match /applications/{id} {
       allow create: if true;
       allow read, update, delete: if isAdmin();
     }

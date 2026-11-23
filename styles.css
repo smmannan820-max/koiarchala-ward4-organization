@@ -686,3 +686,40 @@ footer{font-size:17px}
   word-break:keep-all !important;
   max-width:none !important;
 }
+
+
+/* Blanket distribution lists: all columns single-line, scroll horizontally */
+.blanket-table-wrap{
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+}
+.blanket-table-wrap table.blanket-table{
+  display:table !important;
+  width:max-content !important;
+  min-width:100% !important;
+  table-layout:auto !important;
+  border-collapse:collapse !important;
+}
+.blanket-table-wrap table.blanket-table th,
+.blanket-table-wrap table.blanket-table td{
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:keep-all !important;
+  width:auto !important;
+  min-width:max-content !important;
+  max-width:none !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+  vertical-align:middle !important;
+}
+.blanket-table-wrap table.blanket-table th *,
+.blanket-table-wrap table.blanket-table td *{
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:keep-all !important;
+  max-width:none !important;
+}

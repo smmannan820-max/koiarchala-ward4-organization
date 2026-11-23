@@ -12,7 +12,7 @@
 <nav>
 <a href="#apply">সদস্য আবেদন</a><a href="#about">পরিচিতি</a><a href="#committee">কার্যনির্বাহী কমিটি</a><a href="#advisers">উপদেষ্টা</a>
 <a href="#members">সদস্য</a><a href="#activities">কার্যক্রম</a><a href="#support">সাপ্তাহিক সহায়তা</a><a href="#notices">নোটিশ</a>
-<a href="#blanketApply">কম্বল আবেদন</a><a href="#blankets">চূড়ান্ত তালিকা</a><a href="#finance">অনুদান</a><a href="#gallery">গ্যালারি</a><a href="admin.html">অ্যাডমিন</a>
+<a href="#blankets">চূড়ান্ত তালিকা</a><a href="#finance">অনুদান</a><a href="#gallery">গ্যালারি</a><a href="admin.html">অ্যাডমিন</a>
 </nav>
 <main>
 
@@ -40,23 +40,11 @@
 <section id="activities"><h2>মানবিক কার্যক্রম</h2><p>প্রতি সপ্তাহে একজন অসহায় মানুষের পাশে দাঁড়ানোসহ সংগঠনের মানবিক উদ্যোগসমূহ।</p><div id="activitiesList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>
 <section id="support"><h2>সাপ্তাহিক মানবিক সহায়তা</h2><div id="supportList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>
 <section id="notices"><h2>নোটিশ ও ঘোষণা</h2><div id="noticesList" class="cards"><p>তথ্য লোড হচ্ছে...</p></div></section>
-<section id="blanketApply"><h2>কম্বল বিতরণের আবেদন</h2>
-<p>কম্বল বিতরণের জন্য আবেদন জমা দিন। আবেদনগুলো সংগঠন যাচাই করে চূড়ান্ত সিদ্ধান্ত নেবে।</p>
-<form id="blanketPublicForm" class="formgrid">
-<input name="name" placeholder="আবেদনকারীর পূর্ণ নাম" maxlength="100" required>
-<input name="father" placeholder="পিতা / স্বামীর নাম" maxlength="100" required>
-<input name="village" placeholder="গ্রাম / পাড়া" maxlength="120" required>
-<input name="address" placeholder="বাড়ি / রাস্তা / পূর্ণ ঠিকানা" maxlength="250" required>
-<input name="phone" type="tel" placeholder="মোবাইল নম্বর" maxlength="20" required>
-<input name="familyMembers" type="number" min="1" max="30" placeholder="পরিবারের সদস্য সংখ্যা" required>
-<textarea name="details" maxlength="500" placeholder="আপনার অসহায়ত্ব / বিশেষ পরিস্থিতির সংক্ষিপ্ত বিবরণ (ঐচ্ছিক)"></textarea>
-<button type="submit">কম্বল বিতরণের আবেদন জমা দিন</button>
-</form><p id="blanketApplyMsg" aria-live="polite"></p></section>
 <section id="blankets"><h2>কম্বল বিতরণের চূড়ান্ত তালিকা</h2><p>যাচাই-বাছাই শেষে অনুমোদিত ব্যক্তিদের নাম এখানে প্রকাশ করা হবে।</p><div id="blanketFinalPublicList">চূড়ান্ত তালিকা লোড হচ্ছে...</div></section>
 <section id="finance"><h2>অনুদান ও আর্থিক হিসাব</h2><div id="financeSummary" class="finance-summary">হিসাব লোড হচ্ছে...</div><div id="financeList"></div></section>
 <section id="gallery"><h2>ছবির গ্যালারি</h2><div id="galleryList" class="gallery"><p>ছবি লোড হচ্ছে...</p></div></section>
 
 </main>
 <footer>কৈয়ারচালা ৪নং ওয়ার্ড উন্নয়ন সংগঠন · মানবতার সেবায়, মানুষের পাশে।</footer>
-<script type="module" src="app.js?v=blanket-public-no-ward-restriction-3"></script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js?v=31").catch(e=>console.log("App offline setup:",e)))}</script>
+<script type="module" src="app.js?v=blanket-application-hidden-4"></script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js?v=31").catch(e=>console.log("App offline setup:",e)))}</script>
 </body></html>

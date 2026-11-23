@@ -263,3 +263,15 @@ footer{font-size:17px}
 .blanket-total{text-align:right;font-weight:800;color:#172033;margin-top:12px;font-size:18px}
 .blanket-table button{font-size:13px;padding:7px 9px;margin:2px}
 @media(max-width:620px){.blanket-table{min-width:720px}.blanket-table th,.blanket-table td{font-size:15px;padding:9px 10px}}
+
+/* Donation income and expense ledger tables */
+.finance-table-wrap{width:100%;overflow-x:auto;margin:12px 0;border:1px solid #dfd3ad;border-radius:10px;background:#fff}
+.finance-table{width:100%;min-width:820px;border-collapse:collapse;color:#172033;background:#fff}
+.finance-table th,.finance-table td{border:1px solid #e2d8bd;padding:10px 11px;text-align:left;vertical-align:middle;font-size:15px;line-height:1.5;white-space:normal}
+.finance-table thead th{background:#172033;color:#f1d77f;font-weight:800;white-space:nowrap}
+.finance-table tbody tr:nth-child(even){background:#fbf8ee}
+.finance-table td:first-child,.finance-table th:first-child{text-align:center;width:58px;font-weight:800}
+.finance-table td:nth-child(3){font-weight:750;min-width:145px}
+.finance-table td:nth-child(4){font-weight:800;white-space:nowrap}
+.finance-table button{font-size:13px;padding:7px 9px;margin:2px}
+@media(max-width:620px){.finance-table{min-width:800px}.finance-table th,.finance-table td{font-size:14px;padding:8px}}

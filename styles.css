@@ -775,3 +775,21 @@ footer{font-size:17px}
   max-height:18px !important;
   width:auto !important;
 }
+
+/* Make blanket table rows even shorter without wrapping any text */
+.blanket-table-wrap table.blanket-table th,
+.blanket-table-wrap table.blanket-table td{
+ padding:0 4px !important;
+ font-size:9px !important;
+ line-height:1 !important;
+ height:15px !important;
+}
+.blanket-table-wrap table.blanket-table tbody tr{height:15px !important}
+.blanket-table-wrap table.blanket-table button{
+ padding:0 3px !important;
+ margin:0 !important;
+ font-size:8px !important;
+ line-height:1 !important;
+ height:14px !important;
+ min-height:14px !important;
+}

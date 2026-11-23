@@ -402,3 +402,52 @@ footer{font-size:17px}
     padding:5px 4px !important;
   }
 }
+
+
+/* Blanket application table: narrow columns, full text wraps vertically */
+#blanketApplicationsList .blanket-table{
+  width:100%;
+  min-width:900px;
+  table-layout:fixed;
+}
+#blanketApplicationsList .blanket-table th,
+#blanketApplicationsList .blanket-table td{
+  width:88px !important;
+  max-width:88px !important;
+  min-width:0 !important;
+  padding:8px 6px !important;
+  font-size:12px !important;
+  line-height:1.45 !important;
+  white-space:normal !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+  overflow-wrap:anywhere !important;
+  word-break:normal !important;
+  vertical-align:middle !important;
+}
+#blanketApplicationsList .blanket-table th:first-child,
+#blanketApplicationsList .blanket-table td:first-child{
+  width:42px !important;
+  max-width:42px !important;
+  text-align:center;
+  overflow-wrap:normal !important;
+}
+#blanketApplicationsList .blanket-table th:last-child,
+#blanketApplicationsList .blanket-table td:last-child{
+  width:120px !important;
+  max-width:120px !important;
+}
+#blanketApplicationsList .blanket-table button{
+  font-size:10px !important;
+  padding:4px 5px !important;
+  margin:2px 1px !important;
+  white-space:normal !important;
+}
+@media(max-width:620px){
+  #blanketApplicationsList .blanket-table{min-width:900px}
+  #blanketApplicationsList .blanket-table th,
+  #blanketApplicationsList .blanket-table td{
+    font-size:12px !important;
+    padding:7px 5px !important;
+  }
+}

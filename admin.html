@@ -1,4 +1,4 @@
-<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>সংগঠনের অ্যাডমিন প্যানেল</title><link rel="stylesheet" href="styles.css?v=finance-ledger6"></head>
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>সংগঠনের অ্যাডমিন প্যানেল</title><link rel="stylesheet" href="styles.css?v=blanket-management1"></head>
 <body><header class="hero"><div><h1>কৈয়ারচালা ৪নং ওয়ার্ড উন্নয়ন সংগঠন</h1><p>অ্যাডমিন ব্যবস্থাপনা</p></div><a class="headerlink" href="index.html">ওয়েবসাইট দেখুন</a></header><main>
 <section id="loginBox"><h2>অ্যাডমিন লগইন</h2><form id="login"><input name="email" type="email" placeholder="অ্যাডমিন ইমেইল" required><input name="password" type="password" placeholder="পাসওয়ার্ড" required><button>লগইন</button></form><p id="loginMsg"></p></section>
 <section id="panel" hidden><div class="adminbar"><h2>ড্যাশবোর্ড</h2><button id="logout" class="secondary">লগআউট</button></div><p id="adminMsg" aria-live="polite"></p>
@@ -8,7 +8,22 @@
 <div class="adminsection"><h3>৪. সদস্য আবেদন</h3><div id="applicationsSummary" class="application-summary">আবেদনের হিসাব লোড হচ্ছে...</div><div id="applicationsList">লোড হচ্ছে...</div></div>
 <div class="adminsection"><h3>৫. মানবিক কার্যক্রম / সাপ্তাহিক সহায়তা</h3><form id="activityForm" class="formgrid"><input name="title" placeholder="কার্যক্রমের শিরোনাম" required><input name="date" type="date"><input name="recipient" placeholder="সহায়তা পাওয়া ব্যক্তির নাম"><textarea name="details" placeholder="বিস্তারিত"></textarea><input name="photo" type="file" accept="image/*"><button>কার্যক্রম সংরক্ষণ</button></form><div id="activitiesAdminList"></div>
 <h4>সাপ্তাহিক মানবিক সহায়তা আলাদা রেকর্ড</h4><form id="supportForm" class="formgrid"><input name="date" type="date"><input name="recipient" placeholder="সহায়তা পাওয়া ব্যক্তির নাম" required><input name="amount" type="number" min="0" placeholder="সহায়তার পরিমাণ (টাকা)"><input name="details" placeholder="সহায়তার বিবরণ"><input name="photo" type="file" accept="image/*"><button>সহায়তার তথ্য সংরক্ষণ</button></form><div id="supportAdminList"></div></div>
-<div class="adminsection"><h3>৬. অনুদান জমা ও অনুদান প্রদান / আয়-ব্যয়ের হিসাব</h3>
+<div class="adminsection"><h3>৬. শীতার্তদের কম্বল বিতরণ ব্যবস্থাপনা</h3>
+<p>এখানে প্রাথমিক আবেদন শুধু অ্যাডমিন দেখতে পারবেন। যাচাই শেষে অনুমোদন করলে নাম চূড়ান্ত তালিকায় প্রকাশ হবে।</p>
+<form id="blanketForm" class="formgrid">
+<input name="name" placeholder="ব্যক্তির পূর্ণ নাম" required>
+<input name="father" placeholder="পিতা / স্বামীর নাম">
+<input name="village" placeholder="গ্রাম / এলাকা" required>
+<input name="phone" placeholder="মোবাইল নম্বর (ঐচ্ছিক)">
+<input name="familyMembers" type="number" min="1" placeholder="পরিবারের সদস্য সংখ্যা">
+<textarea name="details" placeholder="যাচাইয়ের নোট / বিশেষ তথ্য (শুধু অ্যাডমিনের জন্য)"></textarea>
+<button>প্রাথমিক তালিকায় যোগ করুন</button></form>
+<h4>প্রাথমিক আবেদন ও যাচাই (শুধু অ্যাডমিন)</h4><div id="blanketApplicationsList">লোড হচ্ছে...</div>
+<h4>চূড়ান্ত অনুমোদিত তালিকা</h4><div id="blanketFinalAdminList">লোড হচ্ছে...</div>
+<button type="button" id="downloadBlanketCsv">চূড়ান্ত তালিকা Excel / CSV</button>
+<button type="button" id="printBlanketList" class="secondary">চূড়ান্ত তালিকা PDF / প্রিন্ট</button>
+</div>
+<div class="adminsection"><h3>৭. অনুদান জমা ও অনুদান প্রদান / আয়-ব্যয়ের হিসাব</h3>
 <p>অনুদান জমা ও অনুদান প্রদান আলাদা খাতায় সংরক্ষণ হবে। খরচ/প্রদান মোট জমা থেকে বাদ হয়ে অবশিষ্ট টাকা দেখাবে।</p>
 <form id="financeForm" class="formgrid">
 <select name="kind"><option value="income">অনুদান জমা (আয়)</option><option value="expense">অনুদান প্রদান / খরচ (ব্যয়)</option></select>
@@ -34,4 +49,4 @@
 <div class="adminsection"><h3>৭. নোটিশ ও ঘোষণা</h3><form id="noticeForm" class="formgrid"><input name="title" placeholder="নোটিশের শিরোনাম" required><input name="date" type="date"><textarea name="details" placeholder="নোটিশের বিস্তারিত" required></textarea><button>নোটিশ প্রকাশ</button></form><div id="noticesAdminList"></div></div>
 <div class="adminsection"><h3>৮. ছবির গ্যালারি</h3><form id="imageForm" class="formgrid"><input name="image" type="file" accept="image/*" required><input name="caption" placeholder="ছবির বিবরণ"><button>ছবি আপলোড</button></form><div id="galleryAdminList"></div></div>
 <div class="adminsection"><h3>৯. সংগঠনের লোগো পরিবর্তন</h3><form id="logoForm" class="formgrid"><input name="logo" type="file" accept="image/*" required><button>নতুন লোগো সংরক্ষণ</button></form><p>লোগো আপলোড করলে ওয়েবসাইটে নতুন লোগো দেখাবে।</p></div>
-</section></main><script type="module" src="admin.js?v=expense-only-report1"></script></body></html>
+</section></main><script type="module" src="admin.js?v=blanket-management1"></script></body></html>

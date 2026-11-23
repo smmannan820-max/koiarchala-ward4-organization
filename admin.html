@@ -8,7 +8,29 @@
 <div class="adminsection"><h3>৪. সদস্য আবেদন</h3><div id="applicationsSummary" class="application-summary">আবেদনের হিসাব লোড হচ্ছে...</div><div id="applicationsList">লোড হচ্ছে...</div></div>
 <div class="adminsection"><h3>৫. মানবিক কার্যক্রম / সাপ্তাহিক সহায়তা</h3><form id="activityForm" class="formgrid"><input name="title" placeholder="কার্যক্রমের শিরোনাম" required><input name="date" type="date"><input name="recipient" placeholder="সহায়তা পাওয়া ব্যক্তির নাম"><textarea name="details" placeholder="বিস্তারিত"></textarea><input name="photo" type="file" accept="image/*"><button>কার্যক্রম সংরক্ষণ</button></form><div id="activitiesAdminList"></div>
 <h4>সাপ্তাহিক মানবিক সহায়তা আলাদা রেকর্ড</h4><form id="supportForm" class="formgrid"><input name="date" type="date"><input name="recipient" placeholder="সহায়তা পাওয়া ব্যক্তির নাম" required><input name="amount" type="number" min="0" placeholder="সহায়তার পরিমাণ (টাকা)"><input name="details" placeholder="সহায়তার বিবরণ"><input name="photo" type="file" accept="image/*"><button>সহায়তার তথ্য সংরক্ষণ</button></form><div id="supportAdminList"></div></div>
-<div class="adminsection"><h3>৬. অনুদান ও আয়-ব্যয়ের হিসাব</h3><form id="financeForm" class="formgrid"><select name="kind"><option value="income">অনুদান জমা</option><option value="expense">ব্যয়/সহায়তা প্রদান</option></select><input name="person" placeholder="দাতা/প্রাপকের নাম" required><input name="amount" type="number" min="1" placeholder="টাকার পরিমাণ" required><input name="date" type="date"><input name="details" placeholder="বিবরণ"><button>হিসাব সংরক্ষণ</button></form><div id="financeAdminList"></div></div>
+<div class="adminsection"><h3>৬. অনুদান জমা ও অনুদান প্রদান / আয়-ব্যয়ের হিসাব</h3>
+<p>অনুদান জমা ও অনুদান প্রদান আলাদা খাতায় সংরক্ষণ হবে। খরচ/প্রদান মোট জমা থেকে বাদ হয়ে অবশিষ্ট টাকা দেখাবে।</p>
+<form id="financeForm" class="formgrid">
+<select name="kind"><option value="income">অনুদান জমা (আয়)</option><option value="expense">অনুদান প্রদান / খরচ (ব্যয়)</option></select>
+<input name="person" placeholder="দাতার / যাকে প্রদান করা হলো তার নাম" required>
+<input name="amount" type="number" min="1" placeholder="টাকার পরিমাণ" required>
+<input name="date" type="date" required>
+<input name="details" placeholder="বিবরণ / কী কারণে দেওয়া হলো">
+<button>হিসাব সংরক্ষণ</button></form>
+<div class="finance-summary" id="adminFinanceSummary">হিসাব লোড হচ্ছে...</div>
+<h4>অনুদান জমার তালিকা (আয়)</h4><div id="financeIncomeList"></div>
+<h4>অনুদান প্রদান / খরচের তালিকা (ব্যয়)</h4><div id="financeExpenseList"></div>
+<div class="report-tools"><h4>মাসিক / বাৎসরিক স্টেটমেন্ট ডাউনলোড</h4>
+<form id="financeReportForm" class="formgrid">
+<select name="period" id="reportPeriod"><option value="month">মাসিক স্টেটমেন্ট</option><option value="year">বাৎসরিক স্টেটমেন্ট</option><option value="custom">নিজের তারিখ অনুযায়ী</option></select>
+<select name="kind"><option value="all">জমা ও প্রদান দুটোই</option><option value="income">শুধু অনুদান জমা</option><option value="expense">শুধু অনুদান প্রদান</option></select>
+<input name="month" id="reportMonth" type="month" aria-label="মাস নির্বাচন">
+<input name="year" id="reportYear" type="number" min="2000" max="2100" placeholder="বছর (যেমন ২০২৬)" value="2026">
+<input name="from" id="reportFrom" type="date" aria-label="শুরুর তারিখ">
+<input name="to" id="reportTo" type="date" aria-label="শেষের তারিখ">
+<button type="button" id="downloadFinanceCsv">Excel / CSV ডাউনলোড</button>
+<button type="button" id="printFinanceReport" class="secondary">PDF / প্রিন্ট স্টেটমেন্ট</button>
+</form><p id="financeReportMsg" aria-live="polite">মাস, বছর অথবা নিজের পছন্দের তারিখ দিয়ে যেকোনো সময় স্টেটমেন্ট তৈরি করুন।</p></div></div>
 <div class="adminsection"><h3>৭. নোটিশ ও ঘোষণা</h3><form id="noticeForm" class="formgrid"><input name="title" placeholder="নোটিশের শিরোনাম" required><input name="date" type="date"><textarea name="details" placeholder="নোটিশের বিস্তারিত" required></textarea><button>নোটিশ প্রকাশ</button></form><div id="noticesAdminList"></div></div>
 <div class="adminsection"><h3>৮. ছবির গ্যালারি</h3><form id="imageForm" class="formgrid"><input name="image" type="file" accept="image/*" required><input name="caption" placeholder="ছবির বিবরণ"><button>ছবি আপলোড</button></form><div id="galleryAdminList"></div></div>
 <div class="adminsection"><h3>৯. সংগঠনের লোগো পরিবর্তন</h3><form id="logoForm" class="formgrid"><input name="logo" type="file" accept="image/*" required><button>নতুন লোগো সংরক্ষণ</button></form><p>লোগো আপলোড করলে ওয়েবসাইটে নতুন লোগো দেখাবে।</p></div>

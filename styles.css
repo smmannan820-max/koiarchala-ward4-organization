@@ -152,3 +152,52 @@ button:hover{background:linear-gradient(120deg,#26334b,var(--navy))}
 .stats b,.finance-summary b{color:#8a6b10}
 .adminsection{border-top-color:#eadcae}.headerlink{border-color:var(--gold-light);color:#fff}
 @media(max-width:620px){nav{position:static}}
+
+
+/* Larger, clearer typography across desktop and mobile */
+html{font-size:18px}
+body{font-size:18px;line-height:1.8}
+.hero h1{font-size:clamp(27px,4.6vw,38px);line-height:1.35}
+.hero p{font-size:18px}
+nav a{font-size:16px;padding:9px 12px}
+main{max-width:1180px}
+section>h2{font-size:clamp(25px,3.2vw,32px);line-height:1.45}
+h3{font-size:22px;line-height:1.5}
+p,li{font-size:18px}
+.item{font-size:17px;padding:17px}
+.item h3{font-size:21px}
+.person h3{font-size:22px}
+.person p{font-size:16px}
+.person small,.item small,small{font-size:15px}
+.stats b{font-size:32px}
+.stats span{font-size:16px}
+.finance-summary b{font-size:18px}
+input,textarea,select,button{font-size:17px;padding:13px}
+button{min-height:48px}
+.adminrow{font-size:17px;padding:14px}
+.adminrow small{font-size:15px}
+.adminsection h4{font-size:21px}
+.application-summary b{font-size:26px}
+.application-summary span{font-size:15px}
+footer{font-size:17px}
+@media(max-width:620px){
+ html{font-size:17px}
+ body{font-size:17px;line-height:1.75}
+ .hero h1{font-size:27px}
+ .hero p{font-size:16px}
+ nav a{font-size:15px;padding:8px 9px}
+ main{padding:12px}
+ section{padding:18px 15px}
+ section>h2{font-size:25px}
+ h3,.item h3{font-size:20px}
+ p,li{font-size:17px}
+ .person h3{font-size:19px}
+ .person p{font-size:15px}
+ .person small,.item small,small{font-size:14px}
+ .stats b{font-size:27px}
+ .stats span{font-size:14px}
+ input,textarea,select,button{font-size:16px}
+ .adminrow{font-size:16px}
+ .adminrow small{font-size:14px}
+ .adminsection h4{font-size:19px}
+}

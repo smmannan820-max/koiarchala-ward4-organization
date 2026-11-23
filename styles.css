@@ -290,3 +290,10 @@ footer{font-size:17px}
 .adminsection{scroll-margin-top:12px}
 .adminsection>h3{font-size:clamp(19px,3vw,24px);color:#172033;border-left:5px solid #c9a227;padding:8px 12px;background:#f7f4ea;border-radius:7px}
 @media(max-width:620px){.admin-data-table{min-width:680px}.admin-data-table th,.admin-data-table td{font-size:14px;padding:8px}}
+
+
+/* Committee cards: designation appears above the member name */
+#committeeList .committee-person .committee-position{display:block;margin:4px 0 8px;padding:7px 8px;border:1px solid #e5c76b;border-radius:9px;background:linear-gradient(90deg,#fff6d8,#fffdf6);color:#8a6810;font-size:clamp(18px,2.5vw,23px);font-weight:900;line-height:1.5;text-align:center}
+#committeeList .committee-person h3{margin:5px 0 8px;color:#172033;font-size:clamp(17px,2.5vw,21px);font-weight:800}
+#committeeList .committee-vacancy .committee-position{display:block;margin:7px 0 10px;padding:7px 8px;border:1px solid #e5c76b;border-radius:9px;background:linear-gradient(90deg,#fff6d8,#fffdf6);color:#8a6810;font-size:clamp(18px,2.5vw,23px);font-weight:900;line-height:1.5;text-align:center}
+@media(max-width:620px){#committeeList .committee-person .committee-position,#committeeList .committee-vacancy .committee-position{font-size:17px;padding:6px 4px}#committeeList .committee-person h3{font-size:18px}}

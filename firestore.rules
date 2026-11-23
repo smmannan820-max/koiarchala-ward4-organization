@@ -17,7 +17,8 @@ service cloud.firestore {
     }
     match /counters/{id} {
       allow read, write: if isAdmin();
-    }\n    match /applications/{id} {
+    }
+    match /applications/{id} {
       allow create: if true;
       allow read, update, delete: if isAdmin();
     }

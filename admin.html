@@ -18,7 +18,7 @@
 <input name="familyMembers" type="number" min="1" placeholder="পরিবারের সদস্য সংখ্যা">
 <textarea name="details" placeholder="যাচাইয়ের নোট / বিশেষ তথ্য (শুধু অ্যাডমিনের জন্য)"></textarea>
 <button>প্রাথমিক তালিকায় যোগ করুন</button></form>
-<h4>প্রাথমিক আবেদন ও যাচাই (শুধু অ্যাডমিন)</h4><div id="blanketApplicationsList">লোড হচ্ছে...</div>
+<h4>প্রাথমিক আবেদন ও যাচাই (শুধু অ্যাডমিন)</h4><p>সব আবেদন ক্রমানুসারে টেবিলে দেখুন এবং PDF হিসেবে সংরক্ষণ করুন।</p><button type="button" id="printBlanketApplications" class="secondary">প্রাথমিক আবেদন তালিকা PDF / প্রিন্ট</button><div id="blanketApplicationsList">লোড হচ্ছে...</div>
 <h4>চূড়ান্ত অনুমোদিত তালিকা</h4><div id="blanketFinalAdminList">লোড হচ্ছে...</div>
 <button type="button" id="downloadBlanketCsv">চূড়ান্ত তালিকা Excel / CSV</button>
 <button type="button" id="printBlanketList" class="secondary">চূড়ান্ত তালিকা PDF / প্রিন্ট</button>
@@ -49,4 +49,4 @@
 <div class="adminsection"><h3>৮. নোটিশ ও ঘোষণা</h3><form id="noticeForm" class="formgrid"><input name="title" placeholder="নোটিশের শিরোনাম" required><input name="date" type="date"><textarea name="details" placeholder="নোটিশের বিস্তারিত" required></textarea><button>নোটিশ প্রকাশ</button></form><div id="noticesAdminList"></div></div>
 <div class="adminsection"><h3>৯. ছবির গ্যালারি</h3><form id="imageForm" class="formgrid"><input name="image" type="file" accept="image/*" required><input name="caption" placeholder="ছবির বিবরণ"><button>ছবি আপলোড</button></form><div id="galleryAdminList"></div></div>
 <div class="adminsection"><h3>১০. সংগঠনের লোগো পরিবর্তন</h3><form id="logoForm" class="formgrid"><input name="logo" type="file" accept="image/*" required><button>নতুন লোগো সংরক্ষণ</button></form><p>লোগো আপলোড করলে ওয়েবসাইটে নতুন লোগো দেখাবে।</p></div>
-</section></main><script type="module" src="admin.js?v=admin-master-tables2"></script></body></html>
+</section></main><script type="module" src="admin.js?v=blanket-application-table-pdf2"></script></body></html>

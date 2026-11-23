@@ -15,6 +15,7 @@ service cloud.firestore {
         request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 100 &&
         request.resource.data.father is string && request.resource.data.father.size() <= 100 &&
         request.resource.data.village is string && request.resource.data.village.size() > 0 && request.resource.data.village.size() <= 120 &&
+        request.resource.data.address is string && request.resource.data.address.size() > 0 && request.resource.data.address.size() <= 250 &&
         request.resource.data.phone is string && request.resource.data.phone.size() > 0 && request.resource.data.phone.size() <= 20 &&
         request.resource.data.familyMembers is int && request.resource.data.familyMembers >= 1 && request.resource.data.familyMembers <= 30 &&
         request.resource.data.wardResident == true &&
